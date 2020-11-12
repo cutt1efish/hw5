@@ -1,0 +1,54 @@
+# print your command here
+
+a. git init dir
+
+b. echo"adad" > bio.md
+   echo '''
+   #include <iostream>
+   using namespace std;
+
+   int main() {
+        cout << "Hello!";
+        return 0;
+   }
+   ''' > main.cpp
+   git add bio.md
+   git add main.cpp
+   git commit -m "add bio.md and main.cpp"
+
+c. echo '''
+   SHELL := /bin/bash
+
+   all:
+   	   g++ main.cpp -o main
+       ./main
+   ''' > Makefile
+   make
+   git add Makefile
+   git commit -m "add Makefile"
+
+d. touch "1.txt"
+   touch "2.txt"
+   touch "3.txt"
+   git add "1.txt"
+   git commit -m "1"
+   git add "2.txt"
+   git commit -m "2"
+   git add "3.txt"
+   git commit -m "3"
+
+e. git checkout 08b
+   git switch -c cmake
+   rm Makefile
+   echo '''
+   cmake_minimum_required(VERSION 3.16)
+   project(Proj)
+   set(CMAKE_CXX_STANDARD 17)
+   set(SRC main.cpp)
+   set(RUN main)
+   add_executable(${RUN} ${SRC})
+   ''' > CMakeLists.txt
+f. git add .
+   git checkout master
+   git add .
+   git commit -m "merge"
